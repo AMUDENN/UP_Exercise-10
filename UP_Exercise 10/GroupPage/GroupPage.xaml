@@ -1,0 +1,45 @@
+﻿<Page x:Class="UP_Exercise_10.GroupPage.GroupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP_Exercise_10.GroupPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="550"
+      Title="GroupPage">
+    <Grid>
+        <Label Content="Выберите функцию:" Style="{DynamicResource LabelStyle}" FontSize="16" Height="30" Width="160" Margin="40,30,350,290"/>
+        <ComboBox x:Name="FunctionBox" SelectionChanged="FunctionSelectionChanged" Height="30" Width="100" Margin="210,30,240,290">
+            <TextBlock Text="AveDev"/>
+            <TextBlock Text="Average"/>
+            <TextBlock Text="Max"/>
+            <TextBlock Text="Median"/>
+            <TextBlock Text="Min"/>
+            <TextBlock Text="Sum"/>
+        </ComboBox>
+
+        <Label Content="Введите числа:" Style="{DynamicResource LabelStyle}" FontSize="16" Height="30" Width="160" Margin="40,90,350,230"/>
+        <Button Content="+" Click="PlusClick" Style="{DynamicResource ButtonStyle}" Height="40" Width="40" Margin="160,130,350,180" />
+        <Button Content="-" Click="MinusClick" Style="{DynamicResource ButtonStyle}" Height="40" Width="40" Margin="115,130,395,180" />
+        <Grid x:Name="NumberGrid" Height="150" Width="300" Margin="210,90,40,110">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="Number" Grid.Row="0" Grid.Column="0" Style="{DynamicResource TextBoxStyle}" PreviewTextInput="NumberPreviewTextInput" TextChanged="NumberTextChanged" Height="30" Width="100"/>
+        </Grid>
+
+        <Label Content="Результат:" Style="{DynamicResource LabelStyle}" FontSize="16" Height="30" Width="160" Margin="40,275,350,45"/>
+        <TextBox x:Name="Result" Style="{DynamicResource TextBoxStyle}" IsReadOnly="True" Height="30" Width="100" Margin="210,275,240,45"/>
+
+        <Button Content="Назад" Click="BackClick" Style="{DynamicResource ButtonStyle}" Height="50" Width="120" Margin="390,265,40,35" />
+    </Grid>
+</Page>

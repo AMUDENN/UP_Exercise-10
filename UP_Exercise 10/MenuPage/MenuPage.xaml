@@ -1,0 +1,15 @@
+﻿<Page x:Class="UP_Exercise_10.MenuPage.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP_Exercise_10.MenuPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="MenuPage">
+    <Grid>
+        <Button Content="Геометрические функции" Click="GeometricClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,25,50,275"/>
+        <Button Content="Алгебраические функции" Click="AlgebraicClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,150,50,150"/>
+        <Button Content="Групповые функции" Click="GroupClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,275,50,25"/>
+    </Grid>
+</Page>
