@@ -19,7 +19,7 @@ namespace UP_Exercise_10
             else ExcelFunctions.Application.Quit();
         }
         private static MessageBoxResult ActionConfirmation(string question) => MessageBox.Show(question, "Подтвердите действие", MessageBoxButton.YesNo, MessageBoxImage.Question);
-        public static void ShowErrorMessageBox(string function) => MessageBox.Show(function, "Ошибка при вычислении", MessageBoxButton.OK, MessageBoxImage.Error);
+        public static void ShowErrorMessageBox(string function) => MessageBox.Show($"Ошибка при вычислении {function}", "Ошибка при вычислении", MessageBoxButton.OK, MessageBoxImage.Error);
         public static void BackClick(Page page)
         {
             page.NavigationService.Navigate(new MenuPage.MenuPage());
