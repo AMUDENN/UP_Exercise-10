@@ -1,11 +1,4 @@
-﻿using NetOffice.ExcelApi.Enums;
-using NetOffice.Extensions.Invoker;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NetOffice.Extensions.Invoker;
 using Excel = NetOffice.ExcelApi;
 
 namespace UP_Exercise_10.ApplicationLogic

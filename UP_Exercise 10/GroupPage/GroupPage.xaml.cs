@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Automation;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UP_Exercise_10.ApplicationLogic;
 
 namespace UP_Exercise_10.GroupPage
@@ -38,8 +28,16 @@ namespace UP_Exercise_10.GroupPage
                 Result.Text = "";
                 return;
             }
+            string function = ((TextBlock)FunctionBox.SelectedItem).Text.ToString();
             object[] nums = new object[] { NumberGrid.Children.OfType<UIElement>().Select(x => Convert.ToDouble(((TextBox)x).Text.Replace('.', ','))).ToArray() };
-            Result.Text = $"{ExcelFunctions.GetResult(((TextBlock)FunctionBox.SelectedItem).Text.ToString(), nums):f2}";
+            try
+            {
+                Result.Text = $"{ExcelFunctions.GetResult(function, nums):f2}";
+            }
+            catch
+            {
+                MainWindow.ShowErrorMessageBox(function);
+            }
         }
         private void PlusClick(object sender, RoutedEventArgs e)
         {

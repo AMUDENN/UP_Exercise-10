@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Xml.Linq;
 using UP_Exercise_10.ApplicationLogic;
 
 namespace UP_Exercise_10
@@ -32,6 +19,7 @@ namespace UP_Exercise_10
             else ExcelFunctions.Application.Quit();
         }
         private static MessageBoxResult ActionConfirmation(string question) => MessageBox.Show(question, "Подтвердите действие", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        public static void ShowErrorMessageBox(string function) => MessageBox.Show(function, "Ошибка при вычислении", MessageBoxButton.OK, MessageBoxImage.Error);
         public static void BackClick(Page page)
         {
             page.NavigationService.Navigate(new MenuPage.MenuPage());

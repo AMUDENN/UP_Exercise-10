@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UP_Exercise_10.ApplicationLogic;
 
 namespace UP_Exercise_10.GeometricPage
@@ -40,7 +30,14 @@ namespace UP_Exercise_10.GeometricPage
             }
             string function = ((TextBlock)FunctionBox.SelectedItem).Text.ToString();
             double num = Convert.ToDouble(Number.Text.Replace('.', ','));
-            Result.Text = (new string[] { "Acos", "Asin" }.Contains(function) && (num > 1 || num < -1)) ? "" : $"{ExcelFunctions.GetResult(function, new object[] { num }):f2}";
+            try
+            {
+                Result.Text = (new string[] { "Acos", "Asin" }.Contains(function) && (num > 1 || num < -1)) || (new string[] { "Cot", "Csc" }.Contains(function) && num == 0) ? "" : $"{ExcelFunctions.GetResult(function, new object[] { num }):f2}";
+            }
+            catch
+            {
+                MainWindow.ShowErrorMessageBox(function);
+            }
         }
         private void BackClick(object sender, RoutedEventArgs e)
         {
