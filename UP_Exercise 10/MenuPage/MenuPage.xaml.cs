@@ -18,9 +18,9 @@ namespace UP_Exercise_10.MenuPage
         {
             NavigationService.Navigate(new AlgebraicPage.AlgebraicPage());
         }
-        private void GroupClick(object sender, RoutedEventArgs e)
+        private void AggregateClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new GroupPage.GroupPage());
+            NavigationService.Navigate(new AggregatePage.AggregatePage());
         }
     }
 }

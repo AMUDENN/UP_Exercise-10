@@ -10,6 +10,6 @@
     <Grid>
         <Button Content="Геометрические функции" Click="GeometricClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,25,50,275"/>
         <Button Content="Алгебраические функции" Click="AlgebraicClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,150,50,150"/>
-        <Button Content="Групповые функции" Click="GroupClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,275,50,25"/>
+        <Button Content="Агрегатные функции" Click="AggregateClick" Style="{DynamicResource ButtonStyle}" Height="100" Width="300" Margin="50,275,50,25"/>
     </Grid>
 </Page>

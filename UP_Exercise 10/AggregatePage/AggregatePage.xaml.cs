@@ -5,11 +5,11 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using UP_Exercise_10.ApplicationLogic;
 
-namespace UP_Exercise_10.GroupPage
+namespace UP_Exercise_10.AggregatePage
 {
-    public partial class GroupPage : Page
+    public partial class AggregatePage : Page
     {
-        public GroupPage()
+        public AggregatePage()
         {
             InitializeComponent();
         }
